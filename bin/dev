@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../app');
+var http = require('http');
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = 8080;
+
+
+//加载compass
+app.use(require('node-compass')({mode: 'expanded', sass: 'css', css: 'css'}));
+
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+
+
+

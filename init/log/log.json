@@ -1,0 +1,18 @@
+{
+  "appenders": [
+    {
+      "type": "console"
+    },
+    {
+      "type": "dateFile",
+      "filename": "logs/log_boot-",
+      "pattern": "yyyy-MM-dd.log",
+      "alwaysIncludePattern": true,
+      "category": "log_boot"
+    }
+  ],
+  "replaceConsole": true,
+  "levels": {
+    "log_boot": "ALL"
+  }
+}

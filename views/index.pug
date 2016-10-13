@@ -1,0 +1,14 @@
+extends base/html
+block head
+    link(href='/style/index.css',rel='stylesheet')
+    include base/ngLib
+    script( src="/app/login/systemjs.config.js")
+    script
+        | System.import('login').catch(function (err) {
+        | console.error(err);
+        | });
+block body
+    .login loading
+
+
+
